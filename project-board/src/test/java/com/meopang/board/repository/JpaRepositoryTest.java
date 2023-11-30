@@ -40,7 +40,7 @@ class JpaRepositoryTest {
         //Then
         assertThat(articles)
                 .isNotNull()
-                .hasSize(0);
+                .hasSize(123);
     }
 
     @DisplayName("Insert Test")
@@ -68,7 +68,7 @@ class JpaRepositoryTest {
         Article savedArticle = articleRepository.save(article);
 
         //Then
-        assertThat(savedArticle).hasFieldOrPropertyWithValue("hashtage", updatedHashtag);
+        assertThat(savedArticle).hasFieldOrPropertyWithValue("hashtag", updatedHashtag);
     }
 
     @DisplayName("Deleting Test")
@@ -78,7 +78,7 @@ class JpaRepositoryTest {
         Article article = articleRepository.findById(1L).orElseThrow();
         long previousArticleCount = articleRepository.count();
         long previousArticleCommentCount = articleCommentRepository.count();
-        long deletedCommentsSize = article.getArticleComments().size();
+        int deletedCommentsSize = article.getArticleComments().size();
 
         //when
         articleRepository.delete(article);
