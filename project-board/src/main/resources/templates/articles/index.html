@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+  <header id = "header"></header>
+  <main>
+      <form>
+          <label for="search-type" hidden>type</label>
+          <select id="search-type" name="search-type">
+              <option>Title</option>
+              <option>Body</option>
+              <option>ID</option>
+              <option>Nickname</option>
+              <option>Hashtag</option>
+          </select>
+          <label for="search-value">keyword</label>
+          <input ID="search-value" type="search" placeholder="Keyword..." name="search-value">
+          <button type="submit">search</button>
+      </form>
+
+      <table>
+          <thead>
+          <tr>
+              <th>Title</th>
+              <th>Hashtag</th>
+              <th>Author</th>
+              <th>Date</th>
+          </tr>
+          </thead>
+          <tr>
+              <td>First article</td>
+              <td>#java</td>
+              <td>Peter</td>
+              <td>2023-01-01</td>
+          </tr>
+          <tr>
+              <td>Second article</td>
+              <td>#spring</td>
+              <td>Peter</td>
+              <td>2023-01-02</td>
+          </tr>
+          <tr>
+              <td>Third article</td>
+              <td>#html</td>
+              <td>Peter</td>
+              <td>2023-01-03</td>
+          </tr>
+          <tbody>
+
+          </tbody>
+      </table>
+
+      <nav>
+          <table>
+              <tr>
+                  <td>previous</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>next</td>
+              </tr>
+          </table>
+      </nav>
+  </main>
+  <footer id="footer"></footer>
+</body>
+</html>
